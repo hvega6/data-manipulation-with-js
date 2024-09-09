@@ -16,5 +16,13 @@ const result = ((n2 - n1) * n3) % n4;
 console.log(`The result of the arithmetic chain is: ${result}`);
 
 // Change isOver25 calculation
-const isUnder25 = (n1 < 25) && (n2 < 25) && (n3 < 25) && (n4 < 25);
-console.log(`All numbers are under 25: ${isUnder25}`);
+const isAnyOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25; // Updated line
+console.log(`All numbers are under 25: ${isAnyOver25}`);
+
+// Check four: all unique numbers
+const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
+console.log(`All numbers are unique: ${isUnique}`);
+
+// Here, we put the results into a single variable 
+const isValid = allDivisibleBy5 && isFirstLargerThanLast && !isAnyOver25 && isUnique;
+console.log(`All conditions are met: ${isValid}`);
